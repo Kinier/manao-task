@@ -1,16 +1,18 @@
 <?php
 $zadano = 20;
+$sum = 0;
 for ($i = 1000; $i < 10000; $i++){
 
-    $numba1 = $i % 10;
-    (int)$numba2 = (int)$i / 10;
-    (int)$numba2 = (int)$numba2 % 10;
-    (int)$numba3 = (int)$i / 100;
-    (int)$numba3 = (int)$numba3 % 10;
-    (int)$numba4 = (int)$i / 1000;
+    for($b = 1; $b<=1000; $b*=10){
+        (int)$numba = (int)$i / $b;
+        (int)$numba = (int)$numba % 10;
+        $sum+=$numba;
+    }
 
-   // жестко затайпкастил
-    if ( (int)$numba1 + (int)$numba2 + (int)$numba3 + (int)$numba4 === $zadano){
+
+
+    if ( $sum === $zadano){
         echo $i . " ";
     } ;
+    $sum = 0;
 }
