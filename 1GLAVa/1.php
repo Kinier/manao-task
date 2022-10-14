@@ -1,15 +1,17 @@
 <?php
 
-function test($number)
-{
-    if ($number < 10) {
-        return ($number < 5);
-    } else {
-        return ($number % 10 < 5) + test($number/10);
-    }
+
+
+
+$number = 123456789;
+$sum = 0;
+while($number > 0){
+    if ($number/10%10 < 5)
+        $sum++;
+
+    $number = (int)($number/10);
 }
 
-$number = 1234567;
-echo test($number);
+echo $sum;
 
 
