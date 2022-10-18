@@ -1,8 +1,8 @@
 <?php
 
 
-$n = 4;
-$m = 5;
+$n = 5;
+$m = 4;
 $p = 10;
 $array = [
     [10, 4, 3, 40],
@@ -16,10 +16,10 @@ $array = [
 
 $sum = 0;
 $sumAll = 0;
-for ($i = 0; $i < $n; $i++) {
+for ($i = 0; $i < $m; $i++) {
     $isStolbecOkay = true;
     $sum = 0;
-    for ($j = 0; $j<$m; $j++){
+    for ($j = 0; $j<$n; $j++){
         if ($array[$j][$i]%$p !== 0){
             $isStolbecOkay = false;
         }else{
