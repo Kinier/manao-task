@@ -1,8 +1,8 @@
 <?php
 
 
-$n = 4;
-$m = 5;
+$n = 5;
+$m = 4;
 $array = [
     [10, -4, 3, -5],
     [10, -1000, 500,-6 ],
@@ -15,10 +15,10 @@ $array = [
 
 $sum = 0;
 $sumAll = 0;
-for ($i = 0; $i < $n; $i++) {
+for ($i = 0; $i < $m; $i++) {
     $isStolbecNegative = true;
     $sum = 0;
-    for ($j = 0; $j < $m; $j++) {
+    for ($j = 0; $j < $n; $j++) {
         if ($array[$j][$i] > 0) {
             $isStolbecNegative = false;
         } else {
@@ -27,17 +27,16 @@ for ($i = 0; $i < $n; $i++) {
     }
 
     if ($isStolbecNegative === true){
-        for ($j = 0; $j < $m; $j++){
+
+        for ($j = 0; $j < $n; $j++){
             $array[$j][$i] = $sum;
         }
     }
     echo PHP_EOL;
 }
 
-
-
-for ($i = 0; $i < $m; $i++){
-    for ($j = 0; $j < $n; $j++){
+for ($i = 0; $i < $n; $i++){
+    for ($j = 0; $j < $m; $j++){
         echo $array[$i][$j]  .' ';
     }
     echo PHP_EOL;
