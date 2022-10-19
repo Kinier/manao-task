@@ -13,7 +13,7 @@ for ($n; $n <= $m; $n++){
     $divides = 0;
     for ($i = 1; $i <= $number; $i++){
         if ($number%$i === 0){
-            $divides++;
+            $divides+=$i;
         }
     }
 
