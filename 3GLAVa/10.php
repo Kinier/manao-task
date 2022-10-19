@@ -12,6 +12,7 @@ $array = [
 
 ];
 
+$newArray = [];
 
 for ($i = 0; $i < $n; $i++) {
     $maxIndex = null;
@@ -20,9 +21,12 @@ for ($i = 0; $i < $n; $i++) {
             $maxIndex = $j;
         }
     }
-
-    unset($array[$i][$maxIndex]);
+    for ($j = 0; $j < $m; $j++){
+        if ($j !== $maxIndex){
+            $newArray[$i][] = $array[$i][$j];
+        }
+    }
     echo PHP_EOL;
 }
 
-print_r($array);
+print_r($newArray);
